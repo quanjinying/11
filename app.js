@@ -2,7 +2,7 @@ const Koa = require("koa");
 const static = require("koa-static");
 const path = require("path");
 let query = require("./db/index");
-const router = require("koa-router")();
+const router = require("koa-router")(); //处理路由
 let app = new Koa();
 app.use(static(path.join(process.cwd(), "./publish/")));
 app.use(router.routes());
